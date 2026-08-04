@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auto-école boîte automatique à Arras | Partenaire Ornikar</title>
+<meta name="description" content="Apprenez à conduire en boîte automatique à Arras avec un moniteur indépendant partenaire Ornikar. Tarifs imbattables, véhicule récent, suivi personnalisé. Réservez votre 1ère leçon.">
+<link rel="canonical" href="https://autoecolearras-boiteautomatique.fr/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Auto-école boîte automatique à Arras | Partenaire Ornikar">
+<meta property="og:description" content="Cours de conduite en boîte automatique à Arras. Moniteur indépendant, partenaire Ornikar, tarifs imbattables.">
+<meta property="og:url" content="https://autoecolearras-boiteautomatique.fr/">
+<meta property="og:locale" content="fr_FR">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DrivingSchool",
+  "name": "Auto-école Boîte Automatique Arras",
+  "description": "Auto-école indépendante à Arras spécialisée dans l'apprentissage de la conduite en boîte automatique, partenaire Ornikar.",
+  "url": "https://autoecolearras-boiteautomatique.fr/",
+  "areaServed": ["Arras", "Saint-Laurent-Blangy", "Achicourt", "Beaurains", "Dainville"],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Arras",
+    "addressRegion": "Hauts-de-France",
+    "addressCountry": "FR"
+  },
+  "priceRange": "€€"
+}
+</script>
+
+<style>
+  :root{
+    --bg: #060a12;
+    --panel: #0f1620;
+    --panel-2: #131c29;
+    --border: #1c2634;
+    --text: #e7ecf3;
+    --text-dim: #8791a3;
+    --mint: #5eead4;
+    --mint-dim: #2a5f56;
+    --amber: #ffc857;
+    --radius: 14px;
+    --display: 'Space Grotesk', sans-serif;
+    --body: 'Inter', sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+  }
+
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+  body{
+    margin:0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--body);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  img{ max-width:100%; display:block; }
+  a{ color: inherit; }
+  h1,h2,h3{ font-family: var(--display); margin:0; line-height:1.1; }
+  p{ margin:0; }
+  .wrap{ max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+  section{ position: relative; }
+
+  ::selection{ background: var(--mint); color: #04120f; }
+  :focus-visible{ outline: 2px solid var(--mint); outline-offset: 3px; }
+
+  /* background texture: faint route-line grid */
+  body::before{
+    content:"";
+    position: fixed; inset:0;
+    background-image:
+      linear-gradient(180deg, rgba(94,234,212,0.035) 1px, transparent 1px);
+    background-size: 100% 96px;
+    pointer-events:none;
+    z-index:0;
+  }
+
+  /* ---------- HEADER ---------- */
+  header{
+    position: sticky; top:0; z-index: 50;
+    background: rgba(6,10,18,0.82);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding: 18px 24px;
+  }
+  .logo{
+    font-family: var(--display); font-weight:700; font-size: 1.05rem;
+    letter-spacing: 0.01em;
+    display:flex; align-items:center; gap:10px;
+    text-decoration:none;
+  }
+  .logo .dot{
+    width:9px; height:9px; border-radius:50%;
+    background: var(--mint);
+    box-shadow: 0 0 12px 2px rgba(94,234,212,0.7);
+  }
+  nav ul{
+    list-style:none; display:flex; gap: 30px; margin:0; padding:0;
+  }
+  nav ul a{
+    text-decoration:none; color: var(--text-dim); font-size:0.92rem;
+    font-weight:500; transition: color .2s ease;
+  }
+  nav ul a:hover{ color: var(--text); }
+  .btn{
+    font-family: var(--body); font-weight:600; font-size:0.9rem;
+    padding: 11px 20px; border-radius: 999px; text-decoration:none;
+    display:inline-flex; align-items:center; gap:8px;
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .btn-primary{
+    background: var(--mint); color:#04120f;
+    box-shadow: 0 0 0 0 rgba(94,234,212,0);
+  }
+  .btn-primary:hover{ transform: translateY(-1px); box-shadow: 0 6px 24px -6px rgba(94,234,212,0.55); }
+  .btn-ghost{
+    border:1px solid var(--border); color: var(--text);
+  }
+  .btn-ghost:hover{ border-color: var(--mint); }
+  .nav-cta{ display:flex; align-items:center; gap:16px; }
+  .burger{ display:none; }
+
+  /* ---------- HERO ---------- */
+  .hero{ padding: 96px 0 60px; overflow:hidden; }
+  .hero-grid{
+    display:grid; grid-template-columns: 1.05fr 0.95fr; gap: 48px; align-items:center;
+  }
+  .eyebrow{
+    font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.08em;
+    color: var(--mint); text-transform: uppercase;
+    display:flex; align-items:center; gap:10px; margin-bottom:22px;
+  }
+  .eyebrow::before{ content:""; width:22px; height:1px; background: var(--mint); }
+  .hero h1{
+    font-size: clamp(2.1rem, 4.4vw, 3.4rem);
+    font-weight: 700; letter-spacing: -0.01em;
+  }
+  .hero h1 em{
+    font-style: normal; color: var(--mint);
+  }
+  .hero p.lead{
+    margin-top: 22px; color: var(--text-dim); font-size: 1.08rem; max-width: 480px;
+  }
+  .hero-cta{ display:flex; gap:14px; margin-top: 34px; flex-wrap:wrap; }
+
+  .stat-strip{
+    margin-top: 52px; display:flex; gap: 0; border-top:1px solid var(--border);
+  }
+  .stat{
+    flex:1; padding: 18px 20px 0; border-right:1px solid var(--border);
+  }
+  .stat:last-child{ border-right:none; }
+  .stat .n{ font-family: var(--mono); font-size:1.5rem; color: var(--text); }
+  .stat .n span{ color: var(--mint); }
+  .stat .l{ font-size: 0.78rem; color: var(--text-dim); margin-top:4px; }
+
+  /* ---------- PROFILE CARD (hero) ---------- */
+  .profile-card{
+    border-radius: var(--radius);
+    background: radial-gradient(120% 120% at 30% 0%, #101b28 0%, #0a1119 60%, #060a12 100%);
+    border: 1px solid var(--border);
+    overflow:hidden;
+  }
+  .profile-photo{
+    position:relative; aspect-ratio: 16/8;
+  }
+  .profile-photo svg{ width:100%; height:100%; display:block; }
+  .photo-tag{
+    position:absolute; bottom:14px; left:14px;
+    font-family: var(--mono); font-size:0.68rem; color: var(--text-dim);
+    background: rgba(6,10,18,0.7); border:1px solid var(--border);
+    padding: 5px 10px; border-radius:999px; backdrop-filter: blur(4px);
+  }
+  .profile-body{ padding: 26px; }
+  .profile-body h3{ font-size:1.3rem; font-weight:700; }
+  .profile-role{
+    font-family: var(--mono); font-size:0.78rem; color: var(--mint);
+    margin-top:4px; letter-spacing:0.03em;
+  }
+  .profile-facts{
+    list-style:none; margin: 18px 0 22px; padding:0;
+    display:flex; flex-direction:column; gap:10px;
+  }
+  .profile-facts li{
+    font-size:0.86rem; color: var(--text-dim); display:flex; gap:10px; align-items:flex-start;
+  }
+  .profile-facts li::before{ content:"—"; color: var(--mint); font-family: var(--mono); flex-shrink:0; }
+
+  .promo-ticket{
+    display:flex; align-items:stretch; border: 1px dashed var(--amber);
+    border-radius: 12px; overflow:hidden; background: rgba(255,200,87,0.05);
+  }
+  .promo-left{
+    flex-shrink:0; padding: 14px 16px; border-right: 1px dashed var(--amber);
+    display:flex; flex-direction:column; justify-content:center; gap:4px;
+  }
+  .promo-label{ font-size:0.65rem; color: var(--text-dim); text-transform:uppercase; letter-spacing:0.05em; }
+  .promo-code{ font-family: var(--mono); font-weight:700; color: var(--amber); font-size:1.15rem; letter-spacing:0.04em; }
+  .promo-right{
+    padding: 14px 16px; display:flex; flex-direction:column; justify-content:center; gap:2px;
+  }
+  .promo-pct{ font-family: var(--mono); font-size:1.15rem; color: var(--text); font-weight:600; }
+  .promo-desc{ font-size:0.78rem; color: var(--text-dim); }
+
+  @media (max-width:520px){
+    .promo-ticket{ flex-direction:column; }
+    .promo-left{ border-right:none; border-bottom:1px dashed var(--amber); }
+  }
+
+  /* signature curve visual (repris dans la section "Pourquoi l'automatique") */
+  .curve-strip{
+    position:relative; border-radius: var(--radius);
+    background: radial-gradient(120% 200% at 30% 20%, #101b28 0%, #0a1119 60%, #060a12 100%);
+    border: 1px solid var(--border);
+    overflow:hidden; height: 180px; margin-bottom: 52px;
+  }
+  .curve-strip svg{ position:absolute; inset:0; width:100%; height:100%; }
+  .curve-label{
+    position:absolute; bottom: 18px; left: 22px; right: 22px;
+    font-family: var(--mono); font-size: 0.72rem; color: var(--text-dim);
+    display:flex; justify-content:space-between; letter-spacing: 0.04em;
+  }
+  .curve-label b{ color: var(--mint); font-weight:500; }
+
+  @keyframes travel{ to{ offset-distance: 100%; } }
+  .runner{
+    offset-path: path("M 20 130 C 100 130, 140 130, 190 95 C 260 45, 320 20, 420 15");
+    offset-distance: 0%;
+    animation: travel 3.4s ease-in-out infinite alternate;
+  }
+
+  /* ---------- SECTION HEADINGS ---------- */
+  .section-head{ max-width: 620px; margin-bottom: 52px; }
+  .section-head .eyebrow{ margin-bottom: 14px; }
+  .section-head h2{ font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight:600; }
+  .section-head p{ color: var(--text-dim); margin-top:14px; }
+  .section-pad{ padding: 90px 0; }
+  .divider{ border:none; border-top:1px solid var(--border); margin:0; }
+
+  /* ---------- WHY AUTOMATIC ---------- */
+  .cards-4{ display:grid; grid-template-columns: repeat(4,1fr); gap:20px; }
+  .card{
+    background: var(--panel); border:1px solid var(--border); border-radius: var(--radius);
+    padding: 26px 22px;
+  }
+  .card .ico{
+    width:38px; height:38px; border-radius:10px; background: rgba(94,234,212,0.1);
+    display:flex; align-items:center; justify-content:center; margin-bottom:18px;
+    color: var(--mint);
+  }
+  .card h3{ font-size: 1.02rem; font-weight:600; margin-bottom:8px; }
+  .card p{ font-size: 0.9rem; color: var(--text-dim); }
+
+  /* ---------- SPLIT: ORNIKAR / MOI ---------- */
+  .split{ display:grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .split-card{
+    background: linear-gradient(180deg, var(--panel-2), var(--panel));
+    border:1px solid var(--border); border-radius: var(--radius); padding: 34px;
+  }
+  .split-card .tag{
+    font-family: var(--mono); font-size:0.72rem; color: var(--amber);
+    text-transform:uppercase; letter-spacing:0.06em; margin-bottom:14px; display:block;
+  }
+  .split-card h3{ font-size: 1.4rem; font-weight:600; margin-bottom: 18px; }
+  .split-card ul{ list-style:none; margin: 0; padding:0; display:flex; flex-direction:column; gap:14px; }
+  .split-card li{
+    font-size: 0.92rem; color: var(--text-dim); display:flex; gap:12px; align-items:flex-start;
+  }
+  .split-card li::before{
+    content:"—"; color: var(--mint); flex-shrink:0; font-family: var(--mono);
+  }
+
+  /* ---------- PRICING ---------- */
+  .price-grid{ display:grid; grid-template-columns: repeat(3,1fr); gap:20px; }
+  .price-card{
+    background: var(--panel); border:1px solid var(--border); border-radius: var(--radius);
+    padding: 30px 26px; display:flex; flex-direction:column;
+  }
+  .price-card.featured{
+    border-color: var(--mint);
+    background: linear-gradient(180deg, rgba(94,234,212,0.07), var(--panel) 60%);
+    position:relative;
+  }
+  .price-card.featured::before{
+    content: "Le plus choisi";
+    position:absolute; top:-1px; right:22px; transform: translateY(-50%);
+    background: var(--mint); color:#04120f; font-family: var(--mono);
+    font-size:0.68rem; padding: 5px 10px; border-radius: 999px; font-weight:600;
+  }
+  .price-card h3{ font-size:1.05rem; font-weight:600; color: var(--text-dim); }
+  .price-card .amount{
+    font-family: var(--mono); font-size: 2.2rem; margin: 16px 0 4px; color: var(--text);
+  }
+  .price-card .amount span{ font-size: 1rem; color: var(--text-dim); }
+  .price-card .note{ font-size: 0.82rem; color: var(--text-dim); margin-bottom: 22px; }
+  .price-card ul{ list-style:none; margin:0 0 26px; padding:0; display:flex; flex-direction:column; gap:10px; flex:1; }
+  .price-card li{ font-size:0.86rem; color: var(--text-dim); display:flex; gap:10px; }
+  .price-card li::before{ content:"✓"; color: var(--mint); font-family: var(--mono); }
+  .price-note-global{
+    margin-top: 26px; font-size: 0.82rem; color: var(--text-dim);
+    border-left: 2px solid var(--amber); padding-left: 14px;
+  }
+
+  /* ---------- STEPS ---------- */
+  .steps{ display:grid; grid-template-columns: repeat(4,1fr); gap: 0; position:relative; }
+  .steps::before{
+    content:""; position:absolute; top: 21px; left: 6%; right:6%; height:1px;
+    background: linear-gradient(90deg, transparent, var(--mint-dim), transparent);
+  }
+  .step{ padding: 0 18px; position:relative; }
+  .step .num{
+    font-family: var(--mono); font-size:0.82rem; color: var(--mint);
+    width: 42px; height:42px; border:1px solid var(--mint-dim); border-radius:50%;
+    display:flex; align-items:center; justify-content:center; background: var(--bg);
+    position:relative; z-index:2; margin-bottom: 20px;
+  }
+  .step h3{ font-size: 1rem; font-weight:600; margin-bottom:8px; }
+  .step p{ font-size:0.86rem; color: var(--text-dim); }
+
+  /* ---------- ZONE ---------- */
+  .zone-wrap{ display:grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items:center; }
+  .zone-list{ display:flex; flex-wrap:wrap; gap:10px; margin-top: 22px; }
+  .zone-chip{
+    font-family: var(--mono); font-size:0.82rem; color: var(--text-dim);
+    border:1px solid var(--border); padding:8px 14px; border-radius:999px;
+  }
+  .zone-visual{
+    aspect-ratio: 4/3; border-radius: var(--radius); border:1px solid var(--border);
+    background: radial-gradient(80% 80% at 50% 50%, rgba(94,234,212,0.08), transparent 70%), var(--panel);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .zone-visual .pin{
+    display:flex; flex-direction:column; align-items:center; gap:10px;
+  }
+  .zone-visual .pin .ring{
+    width:64px; height:64px; border-radius:50%; border:1px solid var(--mint-dim);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .zone-visual .pin .core{
+    width:14px; height:14px; border-radius:50%; background: var(--mint);
+    box-shadow: 0 0 20px 4px rgba(94,234,212,0.5);
+  }
+  .zone-visual .pin span{ font-family: var(--mono); font-size:0.78rem; color: var(--text-dim); }
+
+  /* ---------- FAQ ---------- */
+  .faq{ max-width: 780px; }
+  details{
+    border-bottom: 1px solid var(--border); padding: 22px 0;
+  }
+  summary{
+    cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;
+    font-family: var(--display); font-weight:600; font-size:1.02rem;
+  }
+  summary::-webkit-details-marker{ display:none; }
+  summary::after{
+    content:"+"; font-family: var(--mono); color: var(--mint); font-size:1.3rem; flex-shrink:0; margin-left:20px;
+    transition: transform .2s ease;
+  }
+  details[open] summary::after{ transform: rotate(45deg); }
+  details p{ margin-top: 14px; color: var(--text-dim); font-size: 0.94rem; max-width: 640px; }
+
+  /* ---------- CTA FINAL ---------- */
+  .cta-final{
+    background: linear-gradient(135deg, #0d1a17, #0a1119);
+    border: 1px solid var(--mint-dim); border-radius: 20px;
+    padding: 60px; text-align:center;
+  }
+  .cta-final h2{ font-size: clamp(1.5rem, 3vw, 2rem); }
+  .cta-final p{ color: var(--text-dim); margin-top:14px; }
+  .cta-final .hero-cta{ justify-content:center; margin-top: 28px; }
+
+  /* ---------- FOOTER ---------- */
+  footer{ border-top: 1px solid var(--border); padding: 50px 0 30px; }
+  .foot-grid{ display:grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+  footer h4{ font-family: var(--display); font-size:0.85rem; color: var(--text-dim); text-transform:uppercase; letter-spacing:0.05em; margin-bottom:16px; }
+  footer .foot-desc{ color: var(--text-dim); font-size:0.88rem; max-width: 320px; }
+  footer ul{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:10px; }
+  footer ul a{ text-decoration:none; color: var(--text-dim); font-size:0.88rem; }
+  footer ul a:hover{ color: var(--mint); }
+  .legal-bar{
+    border-top:1px solid var(--border); padding-top: 22px; display:flex; justify-content:space-between;
+    flex-wrap:wrap; gap:10px; font-size: 0.78rem; color: var(--text-dim);
+  }
+
+  @media (max-width: 900px){
+    .nav ul, .nav-cta .btn-ghost{ display:none; }
+    .hero-grid{ grid-template-columns: 1fr; }
+    .profile-card{ order:-1; }
+    .cards-4{ grid-template-columns: repeat(2,1fr); }
+    .split{ grid-template-columns: 1fr; }
+    .price-grid{ grid-template-columns: 1fr; }
+    .steps{ grid-template-columns: 1fr 1fr; row-gap: 32px; }
+    .steps::before{ display:none; }
+    .zone-wrap{ grid-template-columns: 1fr; }
+    .foot-grid{ grid-template-columns: 1fr; }
+    .stat-strip{ flex-wrap:wrap; }
+    .stat{ flex: 1 1 50%; border-bottom:1px solid var(--border); padding-bottom:14px; margin-bottom:4px; }
+    .cta-final{ padding: 40px 24px; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .runner{ animation: none; offset-distance: 40%; }
+    html{ scroll-behavior:auto; }
+  }
+
+  /* ---------- WHATSAPP WIDGET ---------- */
+  .wa-widget{
+    position: fixed; right: 22px; bottom: 22px; z-index: 999;
+    display:flex; flex-direction:column; align-items:flex-end; gap: 14px;
+    font-family: var(--body);
+  }
+  .wa-bubble{
+    width: min(300px, 78vw);
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 18px;
+    box-shadow: 0 20px 50px -12px rgba(0,0,0,0.6);
+    opacity: 0; transform: translateY(14px) scale(0.97);
+    pointer-events: none;
+    transition: opacity .35s ease, transform .35s ease;
+  }
+  .wa-bubble.show{
+    opacity: 1; transform: translateY(0) scale(1);
+    pointer-events: auto;
+  }
+  .wa-bubble-head{
+    display:flex; align-items:center; gap:10px; margin-bottom: 12px;
+  }
+  .wa-bubble-head .avatar{
+    width: 34px; height:34px; border-radius:50%;
+    background: rgba(94,234,212,0.12);
+    display:flex; align-items:center; justify-content:center;
+    color: var(--mint); flex-shrink:0;
+  }
+  .wa-bubble-head .who{ font-size: 0.86rem; font-weight:600; }
+  .wa-bubble-head .status{
+    font-size: 0.72rem; color: var(--mint); display:flex; align-items:center; gap:5px;
+  }
+  .wa-bubble-head .status::before{
+    content:""; width:6px; height:6px; border-radius:50%; background: var(--mint);
+  }
+  .wa-close{
+    margin-left:auto; background:none; border:none; color: var(--text-dim);
+    cursor:pointer; font-size: 1rem; line-height:1; padding:4px;
+  }
+  .wa-close:hover{ color: var(--text); }
+  .wa-msg{
+    background: var(--panel-2); border-radius: 10px; padding: 10px 12px;
+    font-size: 0.85rem; color: var(--text); margin-bottom: 14px;
+  }
+  .wa-bubble .btn{ width:100%; justify-content:center; }
+  .wa-fab{
+    width: 58px; height:58px; border-radius:50%;
+    background: #25D366; border:none; cursor:pointer;
+    display:flex; align-items:center; justify-content:center;
+    box-shadow: 0 10px 30px -6px rgba(37,211,102,0.65);
+    transition: transform .15s ease;
+    position: relative;
+  }
+  .wa-fab:hover{ transform: scale(1.06); }
+  .wa-fab .ping{
+    position:absolute; inset:-4px; border-radius:50%;
+    border: 2px solid #25D366; opacity:0.6;
+    animation: wa-ping 2.4s ease-out infinite;
+  }
+  @keyframes wa-ping{
+    0%{ transform: scale(0.9); opacity: 0.6; }
+    100%{ transform: scale(1.5); opacity: 0; }
+  }
+  @media (prefers-reduced-motion: reduce){
+    .wa-fab .ping{ animation:none; display:none; }
+    .wa-bubble{ transition:none; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav wrap">
+    <a href="#top" class="logo"><span class="dot"></span>Boîte&nbsp;Auto&nbsp;Arras</a>
+    <nav>
+      <ul>
+        <li><a href="#pourquoi">La boîte auto</a></li>
+        <li><a href="#tarifs">Tarifs</a></li>
+        <li><a href="#parcours">Comment ça marche</a></li>
+        <li><a href="#zone">Zone couverte</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+    <div class="nav-cta">
+      <a href="#tarifs" class="btn btn-ghost">Voir les tarifs</a>
+      <a href="https://www.ornikar.com/permis/boite-automatique" target="_blank" rel="noopener" class="btn btn-primary">Réserver un cours</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">Nicolas · Moniteur indépendant · Partenaire Ornikar · Arras</p>
+        <h1>Apprenez à conduire en <em>boîte automatique</em>, sans à-coups et sans détour.</h1>
+        <p class="lead">Formé au métier d'enseignant de la conduite à Arras, où j'ai moi-même passé mon permis, je vous accompagne à bord de ma Fiat 500 électrique automatique. Suivi digital Ornikar inclus, tarif imbattable.</p>
+        <div class="hero-cta">
+          <a href="https://www.ornikar.com/permis/boite-automatique" target="_blank" rel="noopener" class="btn btn-primary">Réserver ma 1ère leçon</a>
+          <a href="#tarifs" class="btn btn-ghost">Voir les tarifs</a>
+        </div>
+
+        <div class="stat-strip">
+          <div class="stat">
+            <div class="n"><span>-30%</span></div>
+            <div class="l">d'heures en moyenne vs boîte manuelle</div>
+          </div>
+          <div class="stat">
+            <div class="n">100<span>%</span></div>
+            <div class="l">concentré sur la conduite, zéro embrayage</div>
+          </div>
+          <div class="stat">
+            <div class="n"><span>Titre Pro</span> ECSR</div>
+            <div class="l">moniteur diplômé & véhicule assuré</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="profile-card">
+        <div class="profile-photo">
+          <svg viewBox="0 0 200 200" aria-hidden="true">
+            <defs>
+              <linearGradient id="avatarGrad" x1="0" y1="0" x2="200" y2="200" gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="#132131"/>
+                <stop offset="1" stop-color="#0a1119"/>
+              </linearGradient>
+            </defs>
+            <rect width="200" height="200" fill="url(#avatarGrad)"/>
+            <circle cx="100" cy="82" r="34" fill="none" stroke="#2a5f56" stroke-width="1.6"/>
+            <path d="M40 172c6-38 34-58 60-58s54 20 60 58" fill="none" stroke="#2a5f56" stroke-width="1.6"/>
+            <circle cx="100" cy="82" r="34" fill="#5eead4" fill-opacity="0.07"/>
+            <path d="M40 172c6-38 34-58 60-58s54 20 60 58" fill="#5eead4" fill-opacity="0.04"/>
+          </svg>
+          <span class="photo-tag">Photo de Nicolas à venir</span>
+        </div>
+
+        <div class="profile-body">
+          <h3>Nicolas, 30 ans</h3>
+          <p class="profile-role">Votre moniteur à Arras</p>
+          <ul class="profile-facts">
+            <li>Formé au métier d'enseignant de la conduite à Arras</li>
+            <li>Permis obtenu à Arras — je connais vos routes d'examen</li>
+            <li>Véhicule Fiat 500 électrique, boîte automatique</li>
+          </ul>
+
+          <div class="promo-ticket">
+            <div class="promo-left">
+              <span class="promo-label">Code partenaire</span>
+              <span class="promo-code">LAN15</span>
+            </div>
+            <div class="promo-right">
+              <span class="promo-pct">-15%</span>
+              <span class="promo-desc">sur votre permis, chez Ornikar</span>
+            </div>
+          </div>
+          <a href="https://www.ornikar.com/permis/boite-automatique" target="_blank" rel="noopener" class="btn btn-primary" style="width:100%; justify-content:center; margin-top:14px;">Profiter du code LAN15</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- POURQUOI L'AUTOMATIQUE -->
+  <section class="section-pad" id="pourquoi">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Pourquoi la boîte automatique</p>
+        <h2>Une conduite plus simple, un apprentissage plus court.</h2>
+        <p>Depuis la réforme du permis, la formation en boîte automatique permet de se concentrer uniquement sur la trajectoire, les priorités et l'anticipation — sans la gestion de l'embrayage.</p>
+      </div>
+
+      <div class="curve-strip" aria-hidden="true">
+        <svg viewBox="0 0 460 150" fill="none" preserveAspectRatio="none">
+          <path d="M 20 130 C 100 130, 140 130, 190 95 C 260 45, 320 20, 420 15" stroke="#1c2634" stroke-width="1.5"/>
+          <path d="M 20 130 C 100 130, 140 130, 190 95 C 260 45, 320 20, 420 15" stroke="url(#grad2)" stroke-width="2"/>
+          <defs>
+            <linearGradient id="grad2" x1="20" y1="130" x2="420" y2="15" gradientUnits="userSpaceOnUse">
+              <stop offset="0" stop-color="#5eead4" stop-opacity="0.15"/>
+              <stop offset="1" stop-color="#5eead4" stop-opacity="1"/>
+            </linearGradient>
+          </defs>
+          <circle class="runner" r="5" fill="#5eead4" style="filter:drop-shadow(0 0 8px #5eead4)"/>
+        </svg>
+        <div class="curve-label">
+          <span>Boîte manuelle <br><b style="color:#8791a3">paliers, à-coups</b></span>
+          <span style="text-align:right">Boîte automatique <br><b>accélération continue</b></span>
+        </div>
+      </div>
+
+      <div class="cards-4">
+        <div class="card">
+          <div class="ico">01</div>
+          <h3>Moins d'heures nécessaires</h3>
+          <p>Sans embrayage à gérer, la plupart des élèves atteignent l'autonomie plus vite qu'en boîte manuelle.</p>
+        </div>
+        <div class="card">
+          <div class="ico">02</div>
+          <h3>Idéal en ville</h3>
+          <p>Arras et ses abords, ronds-points, zones 30 : l'automatique réduit la charge mentale dans le trafic dense.</p>
+        </div>
+        <div class="card">
+          <div class="ico">03</div>
+          <h3>Un permis à part entière</h3>
+          <p>Le permis B automatique est valable pour conduire en France comme partout en Europe.</p>
+        </div>
+        <div class="card">
+          <div class="ico">04</div>
+          <h3>Passage au manuel possible</h3>
+          <p>Après 3 ans d'expérience, une passerelle existe pour étendre son permis au manuel si besoin.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ORNIKAR / MOI -->
+  <section class="section-pad">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Le duo qui fait la différence</p>
+        <h2>La puissance d'Ornikar, la proximité d'un moniteur d'Arras.</h2>
+      </div>
+      <div class="split">
+        <div class="split-card">
+          <span class="tag">Partenaire national</span>
+          <h3>Ornikar</h3>
+          <ul>
+            <li>Code de la route en ligne, à votre rythme, inclus dans le parcours.</li>
+            <li>Suivi de progression en temps réel depuis l'application.</li>
+            <li>Tarifs nationaux parmi les plus compétitifs du marché.</li>
+            <li>Réseau de moniteurs qualifiés, tous Titre Pro ECSR.</li>
+          </ul>
+        </div>
+        <div class="split-card">
+          <span class="tag">Moniteur local</span>
+          <h3>Votre moniteur à Arras</h3>
+          <ul>
+            <li>Créneaux flexibles, y compris tôt le matin et le soir.</li>
+            <li>Véhicule automatique récent équipé double-commande.</li>
+            <li>Prise en charge possible à Arras et communes voisines.</li>
+            <li>Suivi pédagogique personnalisé, élève par élève.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- TARIFS -->
+  <section class="section-pad" id="tarifs">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Tarifs</p>
+        <h2>Des prix imbattables, sans frais cachés.</h2>
+        <p>Grille tarifaire nationale Ornikar — réservation et paiement sécurisés directement sur la plateforme.</p>
+      </div>
+      <div class="price-grid">
+        <div class="price-card">
+          <h3>Heure à la carte</h3>
+          <div class="amount">42,99€<span> / heure</span></div>
+          <p class="note">Sans engagement, à l'unité</p>
+          <ul>
+            <li>1 heure de conduite en automatique</li>
+            <li>Véhicule automatique fourni</li>
+            <li>Bilan de fin de leçon</li>
+          </ul>
+          <a href="https://www.ornikar.com/permis/boite-automatique" target="_blank" rel="noopener" class="btn btn-ghost">Réserver</a>
+        </div>
+        <div class="price-card featured">
+          <h3>Pack Permis Complet</h3>
+          <div class="amount">dès 559,99€</div>
+          <p class="note">Le plus choisi — 13h minimum légal en automatique</p>
+          <ul>
+            <li>Code de la route Ornikar inclus</li>
+            <li>Suivi de progression app</li>
+            <li>Heures de conduite en automatique</li>
+            <li>Accompagnement jusqu'à l'examen</li>
+          </ul>
+          <a href="https://www.ornikar.com/permis/boite-automatique" target="_blank" rel="noopener" class="btn btn-primary">Choisir ce pack</a>
+        </div>
+        <div class="price-card">
+          <h3>Pack 10 heures</h3>
+          <div class="amount">dès 494,99€<span> soit ~49,5€/h</span></div>
+          <p class="note">Pour compléter une formation</p>
+          <ul>
+            <li>10h de conduite en automatique</li>
+            <li>Créneaux flexibles</li>
+            <li>Bilan de progression</li>
+          </ul>
+          <a href="https://www.ornikar.com/permis/boite-automatique" target="_blank" rel="noopener" class="btn btn-ghost">Réserver</a>
+        </div>
+      </div>
+      <p class="price-note-global">Tarifs indiqués "à partir de", grille nationale Ornikar au moment de la rédaction — à vérifier sur <a href="https://www.ornikar.com/permis/boite-automatique" target="_blank" rel="noopener" style="color:var(--mint)">ornikar.com</a> avant publication, car ils évoluent selon les périodes et promotions en cours.</p>
+    </div>
+  </section>
+
+  <!-- PARCOURS -->
+  <section class="section-pad" id="parcours">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Comment ça marche</p>
+        <h2>De l'inscription au permis, en 4 étapes.</h2>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="num">01</div>
+          <h3>Inscription en ligne</h3>
+          <p>Créez votre compte Ornikar et réservez votre première leçon à Arras en quelques minutes.</p>
+        </div>
+        <div class="step">
+          <div class="num">02</div>
+          <h3>Code de la route</h3>
+          <p>Révisez à votre rythme sur l'application, avec un suivi de vos points faibles.</p>
+        </div>
+        <div class="step">
+          <div class="num">03</div>
+          <h3>Prise en main</h3>
+          <p>Premières leçons en boîte automatique, focus sur la trajectoire et les priorités.</p>
+        </div>
+        <div class="step">
+          <div class="num">04</div>
+          <h3>Autonomie & examen</h3>
+          <p>Conduite en autonomie, circuits d'examen, puis passage du permis.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ZONE -->
+  <section class="section-pad" id="zone">
+    <div class="wrap zone-wrap">
+      <div>
+        <p class="eyebrow">Zone couverte</p>
+        <h2>Arras et les communes alentours.</h2>
+        <p style="color:var(--text-dim); margin-top:16px;">Prise en charge possible à domicile ou sur un point de rendez-vous dans le secteur.</p>
+        <div class="zone-list">
+          <span class="zone-chip">Arras</span>
+          <span class="zone-chip">Saint-Laurent-Blangy</span>
+          <span class="zone-chip">Achicourt</span>
+          <span class="zone-chip">Beaurains</span>
+          <span class="zone-chip">Dainville</span>
+          <span class="zone-chip">Saint-Nicolas</span>
+          <span class="zone-chip">Anzin-Saint-Aubin</span>
+        </div>
+      </div>
+      <div class="zone-visual">
+        <div class="pin">
+          <div class="ring"><div class="core"></div></div>
+          <span>ARRAS · 62000</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section-pad" id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Questions fréquentes</p>
+        <h2>Tout savoir sur le permis en boîte automatique.</h2>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>Le permis boîte automatique coûte-t-il plus cher ?</summary>
+          <p>Non, il est en général plus économique : moins d'heures de conduite sont nécessaires en moyenne, car l'apprentissage de l'embrayage disparaît du programme.</p>
+        </details>
+        <details>
+          <summary>Puis-je conduire une boîte manuelle avec ce permis ?</summary>
+          <p>Non, sauf après 3 ans de conduite sans infraction liée à l'alcool ou aux stupéfiants, où une passerelle permet d'étendre le permis à la boîte manuelle.</p>
+        </details>
+        <details>
+          <summary>Combien d'heures faut-il en moyenne ?</summary>
+          <p>Cela dépend du profil de l'élève, mais la formation en automatique demande généralement moins d'heures qu'en manuel, faute de gestion d'embrayage.</p>
+        </details>
+        <details>
+          <summary>Le code de la route est-il inclus ?</summary>
+          <p>Oui, via la plateforme Ornikar, incluse dans les packs de conduite proposés.</p>
+        </details>
+        <details>
+          <summary>Intervenez-vous en dehors d'Arras ?</summary>
+          <p>Oui, dans les communes limitrophes citées plus haut. Contactez-nous pour vérifier votre secteur.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="section-pad" id="contact">
+    <div class="wrap">
+      <div class="cta-final">
+        <h2>Prêt à passer votre permis en boîte automatique à Arras ?</h2>
+        <p>Réservez votre première leçon dès aujourd'hui, sans engagement.</p>
+        <div class="hero-cta">
+          <a href="https://www.ornikar.com/permis/boite-automatique" target="_blank" rel="noopener" class="btn btn-primary">Réserver via Ornikar</a>
+          <a href="https://wa.me/33752084428" target="_blank" rel="noopener" class="btn btn-ghost">Écrire sur WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="#top" class="logo"><span class="dot"></span>Boîte&nbsp;Auto&nbsp;Arras</a>
+        <p class="foot-desc" style="margin-top:16px;">Auto-école indépendante spécialisée en boîte automatique, partenaire Ornikar. Basée à Arras, Hauts-de-France.</p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#pourquoi">La boîte auto</a></li>
+          <li><a href="#tarifs">Tarifs</a></li>
+          <li><a href="#parcours">Comment ça marche</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>Arras, Hauts-de-France</li>
+          <li>[votre téléphone]</li>
+          <li>[votre email]</li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal-bar">
+      <span>© 2026 Auto-école Boîte Automatique Arras — Tous droits réservés</span>
+      <span>SIRET [à compléter] · Agrément préfectoral [à compléter] · Mentions légales</span>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP WIDGET -->
+<div class="wa-widget">
+  <div class="wa-bubble" id="waBubble">
+    <div class="wa-bubble-head">
+      <div class="avatar">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.06-1.33A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2Zm5.2 14.3c-.22.62-1.28 1.18-1.77 1.24-.45.06-1.02.08-1.65-.1-.38-.11-.87-.28-1.5-.55-2.63-1.14-4.35-3.8-4.48-3.98-.13-.18-1.07-1.42-1.07-2.71s.68-1.93.92-2.19c.24-.26.53-.32.7-.32.18 0 .35 0 .5.01.16.01.38-.06.6.46.22.53.75 1.83.82 1.96.07.13.11.29.02.47-.09.18-.13.29-.26.44-.13.15-.27.34-.39.46-.13.13-.27.27-.11.53.16.26.71 1.17 1.52 1.9 1.05.94 1.93 1.23 2.19 1.37.26.13.41.11.56-.07.16-.18.66-.77.84-1.03.18-.26.35-.22.6-.13.24.09 1.53.72 1.79.85.26.13.44.2.5.31.07.11.07.62-.14 1.24Z"/></svg>
+      </div>
+      <div>
+        <div class="wa-bubble-head-top" style="display:flex; align-items:center; gap:8px;">
+          <span class="who">Votre moniteur</span>
+        </div>
+        <div class="status">En ligne</div>
+      </div>
+      <button class="wa-close" id="waClose" aria-label="Fermer">✕</button>
+    </div>
+    <div class="wa-msg">Bonjour 👋 Une question sur le permis boîte automatique à Arras ? Écrivez-moi directement, je réponds vite !</div>
+    <a href="https://wa.me/33752084428?text=Bonjour%2C%20je%20souhaite%20des%20informations%20sur%20le%20permis%20bo%C3%AEte%20automatique%20%C3%A0%20Arras." target="_blank" rel="noopener" class="btn btn-primary">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.06-1.33A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2Zm5.2 14.3c-.22.62-1.28 1.18-1.77 1.24-.45.06-1.02.08-1.65-.1-.38-.11-.87-.28-1.5-.55-2.63-1.14-4.35-3.8-4.48-3.98-.13-.18-1.07-1.42-1.07-2.71s.68-1.93.92-2.19c.24-.26.53-.32.7-.32.18 0 .35 0 .5.01.16.01.38-.06.6.46.22.53.75 1.83.82 1.96.07.13.11.29.02.47-.09.18-.13.29-.26.44-.13.15-.27.34-.39.46-.13.13-.27.27-.11.53.16.26.71 1.17 1.52 1.9 1.05.94 1.93 1.23 2.19 1.37.26.13.41.11.56-.07.16-.18.66-.77.84-1.03.18-.26.35-.22.6-.13.24.09 1.53.72 1.79.85.26.13.44.2.5.31.07.11.07.62-.14 1.24Z"/></svg>
+      Discuter sur WhatsApp
+    </a>
+  </div>
+
+  <button class="wa-fab" id="waFab" aria-label="Ouvrir la discussion WhatsApp">
+    <span class="ping"></span>
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="#fff"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.06-1.33A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2Zm5.2 14.3c-.22.62-1.28 1.18-1.77 1.24-.45.06-1.02.08-1.65-.1-.38-.11-.87-.28-1.5-.55-2.63-1.14-4.35-3.8-4.48-3.98-.13-.18-1.07-1.42-1.07-2.71s.68-1.93.92-2.19c.24-.26.53-.32.7-.32.18 0 .35 0 .5.01.16.01.38-.06.6.46.22.53.75 1.83.82 1.96.07.13.11.29.02.47-.09.18-.13.29-.26.44-.13.15-.27.34-.39.46-.13.13-.27.27-.11.53.16.26.71 1.17 1.52 1.9 1.05.94 1.93 1.23 2.19 1.37.26.13.41.11.56-.07.16-.18.66-.77.84-1.03.18-.26.35-.22.6-.13.24.09 1.53.72 1.79.85.26.13.44.2.5.31.07.11.07.62-.14 1.24Z"/></svg>
+  </button>
+</div>
+
+<script>
+  (function(){
+    var bubble = document.getElementById('waBubble');
+    var closeBtn = document.getElementById('waClose');
+    var fab = document.getElementById('waFab');
+
+    function openBubble(){ bubble.classList.add('show'); }
+    function closeBubble(){ bubble.classList.remove('show'); }
+
+    // Ouverture automatique à l'arrivée sur le site
+    window.addEventListener('load', function(){
+      setTimeout(openBubble, 1200);
+    });
+
+    closeBtn.addEventListener('click', closeBubble);
+    fab.addEventListener('click', function(){
+      if(bubble.classList.contains('show')){ closeBubble(); } else { openBubble(); }
+    });
+  })();
+</script>
+
+</body>
+</html>
